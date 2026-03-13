@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OG Image Generator</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #1a1a1a;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        #og-card {
+            width: 1200px;
+            height: 630px;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            border-left: 4px solid #2563eb;
+            padding: 60px;
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+        }
+        #og-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: radial-gradient(circle at top right, rgba(37, 99, 235, 0.15), transparent 70%);
+        }
+        h1 {
+            color: #2563eb;
+            font-size: 72px;
+            font-weight: 700;
+            margin: 0 0 30px 0;
+            position: relative;
+            z-index: 1;
+        }
+        p {
+            color: #a0a0a0;
+            font-size: 28px;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0;
+            position: relative;
+            z-index: 1;
+        }
+        .url {
+            position: absolute;
+            top: 40px;
+            left: 60px;
+            color: #2563eb;
+            font-size: 20px;
+            font-weight: 500;
+            z-index: 1;
+        }
+        .logo {
+            position: absolute;
+            bottom: 60px;
+            right: 60px;
+            font-size: 180px;
+            font-weight: 900;
+            color: rgba(255, 255, 255, 0.03);
+            z-index: 0;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        button {
+            margin-top: 20px;
+            padding: 15px 30px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        button:hover {
+            background: #1d4ed8;
+        }
+        .instructions {
+            color: #a0a0a0;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div id="og-card">
+        <div class="url">https://rivalz-eta.vercel.app/</div>
+        <h1>Rivalz Devcore</h1>
+        <p>Portfolio Rivalz, seorang Creative Developer dan Desainer UI/UX berbasis di Indonesia yang mengkhususkan diri dalam pengalaman web interaktif.</p>
+        <div class="logo">R</div>
+    </div>
+    
+    <button onclick="downloadImage()">Download as Image (Right-click the card above and "Save Image As")</button>
+    <p class="instructions">
+        Instructions:<br>
+        1. Right-click on the card above<br>
+        2. Select "Save image as..." or take a screenshot<br>
+        3. Save it as "og-image.jpg" in your images folder<br>
+        4. The image is already sized at 1200x630px (perfect for social media)
+    </p>
+
+    <script>
+        // Alternative: Use html2canvas library for automatic download
+        console.log('OG Image card rendered. Right-click to save or take a screenshot.');
+    </script>
+</body>
+</html>
